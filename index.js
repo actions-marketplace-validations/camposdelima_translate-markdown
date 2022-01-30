@@ -17,11 +17,11 @@ const toMarkdown = (ast) => {
   return unified().use(stringify).stringify(ast);
 };
 
-const mainDir = ".";
+const mainDir = core.getInput("FILEPATH") || ".";
 let README = readdirSync(mainDir).includes("readme.md")
   ? "readme.md"
   : "README.md";
-const lang = core.getInput("LANG") || "zh-CN";
+const lang = core.getInput("LANG") || "pt";
 const readme = readFileSync(join(mainDir, README), { encoding: "utf8" });
 const readmeAST = toAst(readme);
 console.log("AST CREATED AND READ");
