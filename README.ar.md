@@ -11,7 +11,7 @@
 
 **GitHub Action لترجمة الملف التمهيدي إلى أي لغة**
 
-هذا إجراء GitHub يقوم تلقائيًا بترجمة الملف التمهيدي في الريبو الخاص بك إلى لغة محددة.
+This is a GitHub Action that automatically translate the readme in your repo to a specified language.
 
 _تقديم ل[DEV: إجراءات جيثب للمصدر المفتوح!](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)هاكاثون_
 
