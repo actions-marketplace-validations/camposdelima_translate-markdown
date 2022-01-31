@@ -19771,7 +19771,7 @@ exports.parseCheckIgnore = (text) => {
 /***/ (function(__unusedmodule, __unusedexports, __webpack_require__) {
 
 const { readFileSync, writeFileSync, readdirSync } = __webpack_require__(747);
-const { join, basename, dirname } = __webpack_require__(622);
+const { join, dirname, parse: fileparse } = __webpack_require__(622);
 const core = __webpack_require__(186);
 const $ = __webpack_require__(579);
 const unified = __webpack_require__(75);
@@ -19796,8 +19796,8 @@ let README = readdirSync(mainDir).includes("readme.md")
 const lang = core.getInput("LANG") || "pt";
 const filepath = (core.getInput("FILEPATH") || join(mainDir, README));
 console.log(`FILEPATH: ${filepath}`);
-let newFilepath = join(dirname(filepath), `${basename(filepath)}.${lang}.md`);
-console.log(`NEW FILE PATH: ${filepath}`);
+let newFilepath = join(dirname(filepath), `${fileparse(filepath).name}.${lang}.md`);
+console.log(`NEW FILE PATH: ${newFilepath}`);
 const readme = readFileSync(filepath, { encoding: "utf8" });
 const readmeAST = toAst(readme);
 console.log("AST CREATED AND READ");
@@ -19834,7 +19834,7 @@ async function commitChanges(lang) {
     "41898282+github-actions[bot]@users.noreply.github.com"
   );
   await git.commit(
-    `docs: Added ${basename(filepath)}.${lang}.md translation via https://github.com/camposdelima/translate-markdown`
+    `docs: Added ${fileparse(filepath).name}.${lang}.md translation via https://github.com/camposdelima/translate-markdown`
   );
   console.log("finished commit");
   await git.push();
@@ -19852,7 +19852,6 @@ async function translateReadme() {
 }
 
 translateReadme();
-
 
 /***/ }),
 /* 933 */,
