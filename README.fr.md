@@ -1,6 +1,6 @@
 # Traduire l'action Lisez-moi
 
-## Traduction LISEZMOI
+## README Translation
 
 -   [Anglais](README.md)
 -   [Chinois simplifié](README.zh-CN.md)
