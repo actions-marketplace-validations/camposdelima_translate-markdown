@@ -1,7 +1,7 @@
 {
-  "name": "translate-md",
-  "version": "1.0.0",
-  "description": "A Github Action to translate Readme to a different language",
+  "name": "translate-markdown",
+  "version": "0.1.0",
+  "description": "A Github Action to translate markdown to a different language",
   "main": "index.js",
   "scripts": {
     "build": "ncc build ./index.js -o dist --source-map",
@@ -10,9 +10,10 @@
   "keywords": [
     "readme",
     "translate",
-    "translator"
+    "translator",
+    "markdown"
   ],
-  "author": "Ephraim Atta-Duncan",
+  "author": "Cristiano Campos (Ephraim Atta-Duncan)",
   "license": "ISC",
   "dependencies": {
     "@actions/core": "^1.2.6",
