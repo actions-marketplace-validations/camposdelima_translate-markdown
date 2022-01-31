@@ -1,6 +1,6 @@
 # रीडमी एक्शन का अनुवाद करें
 
-## README अनुवाद
+## README Translation
 
 -   [अंग्रेज़ी](README.md)
 -   [सरलीकृत चीनी](README.zh-CN.md)
