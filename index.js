@@ -25,7 +25,7 @@ const lang = core.getInput("LANG") || "pt";
 const filepath = (core.getInput("FILEPATH") || join(mainDir, README));
 console.log(`FILEPATH: ${filepath}`);
 let newFilepath = join(dirname(filepath), `${basename(filepath)}.${lang}.md`);
-console.log(`NEW FILE PATH: ${filepath}`);
+console.log(`NEW FILE PATH: ${newFilepath}`);
 const readme = readFileSync(filepath, { encoding: "utf8" });
 const readmeAST = toAst(readme);
 console.log("AST CREATED AND READ");

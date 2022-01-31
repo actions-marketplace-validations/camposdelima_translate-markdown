@@ -13,7 +13,7 @@
 
 Esta é uma ação do Github que traduz automaticamente o Readme no seu repo para um idioma especificado.
 
-_Uma submissão para o[Dev: Ações do GitHub para código aberto!](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn) hackathon_
+_Uma submissão para o[Dev: Ações do GitHub para código aberto!](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)Hackathon._
 
 ## Configurar
 
