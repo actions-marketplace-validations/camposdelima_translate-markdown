@@ -3,10 +3,14 @@ author: Cristiano Campos ( Ephraim Atta-Duncan )
 description: Translate the markdown to another language
 
 inputs:
-  FILEPATH:
-    description: 'The filepath you want to translate to'
+  PATH:
+    description: 'The path you want to translate to'
     required: false
     default: '.'
+  FILEPATH:
+    description: 'The filepath, with path and filename, that you want to translate to'
+    required: false
+    default: './readme.md'
   LANG:
     description: 'The Language you want to translate to'
     required: false
