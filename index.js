@@ -1,7 +1,7 @@
 const { readFileSync, writeFileSync, readdirSync } = require("fs");
 const { join, basename, dirname } = require("path");
 const core = require("@actions/core");
-const $ = require("@k3rn31p4nic/google-translate-api");
+const $ = require("@imlinhanchao/google-translate-api");
 const unified = require("unified");
 const parse = require("remark-parse");
 const stringify = require("remark-stringify");
