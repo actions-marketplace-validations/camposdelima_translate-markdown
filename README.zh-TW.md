@@ -9,11 +9,11 @@
 -   [法語](README.fr.md)
 -   [阿拉伯](README.ar.md)
 
-**GitHub Action to translate Readme to any language**
+**GitHub Action 將自述文件翻譯成任何語言**
 
 這是一個 GitHub 操作，可自動將您的存儲庫中的自述文件翻譯成指定的語言。
 
-_提交給[DEV：開源的 GitHub Actions！](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)黑客馬拉松_
+_A submission for the [DEV：開源的 GitHub Actions！](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)黑客馬拉松_
 
 ## 設置
 
@@ -73,7 +73,7 @@ _提交給[DEV：開源的 GitHub Actions！](https://dev.to/devteam/announcing-
 
 ### 問題
 
-查看[這裡](https://github.com/dephraiim/translate-readme/issues/1)對於與此操作相關的問題。
+Check [這裡](https://github.com/dephraiim/translate-readme/issues/1)對於與此操作相關的問題。
 
 ### 發展
 
