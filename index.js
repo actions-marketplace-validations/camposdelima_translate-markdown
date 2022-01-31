@@ -1,5 +1,5 @@
 const { readFileSync, writeFileSync, readdirSync } = require("fs");
-const { join } = require("path");
+const { join, basename, dirname } = require("path");
 const core = require("@actions/core");
 const $ = require("@k3rn31p4nic/google-translate-api");
 const unified = require("unified");
@@ -17,12 +17,16 @@ const toMarkdown = (ast) => {
   return unified().use(stringify).stringify(ast);
 };
 
-const mainDir = core.getInput("FILEPATH") || ".";
+const mainDir = core.getInput("PATH") || ".";
 let README = readdirSync(mainDir).includes("readme.md")
   ? "readme.md"
   : "README.md";
 const lang = core.getInput("LANG") || "pt";
-const readme = readFileSync(join(mainDir, README), { encoding: "utf8" });
+const filepath = (core.getInput("FILEPATH") || join(mainDir, README));
+console.log(`FILEPATH: ${filepath}`);
+let newFilepath = join(dirname(filepath), `${basename(filepath)}.${lang}.md`);
+console.log(`NEW FILE PATH: ${filepath}`);
+const readme = readFileSync(filepath, { encoding: "utf8" });
 const readmeAST = toAst(readme);
 console.log("AST CREATED AND READ");
 
@@ -42,11 +46,11 @@ const translatedText = originalText.map(async (text) => {
 async function writeToFile() {
   await Promise.all(translatedText);
   writeFileSync(
-    join(mainDir, `README.${lang}.md`),
+    newFilepath,
     toMarkdown(readmeAST),
     "utf8"
   );
-  console.log(`README.${lang}.md written`);
+  console.log(`${newFilepath} written`);
 }
 
 async function commitChanges(lang) {
@@ -58,7 +62,7 @@ async function commitChanges(lang) {
     "41898282+github-actions[bot]@users.noreply.github.com"
   );
   await git.commit(
-    `docs: Added README."${lang}".md translation via https://github.com/dephraiim/translate-readme`
+    `docs: Added ${basename(filepath)}.${lang}.md translation via https://github.com/camposdelima/translate-markdown`
   );
   console.log("finished commit");
   await git.push();
