@@ -1,5 +1,5 @@
 const { readFileSync, writeFileSync, readdirSync } = require("fs");
-const { join, basename, dirname } = require("path");
+const { join, dirname, parse: fileparse } = require("path");
 const core = require("@actions/core");
 const $ = require("@imlinhanchao/google-translate-api");
 const unified = require("unified");
@@ -24,7 +24,7 @@ let README = readdirSync(mainDir).includes("readme.md")
 const lang = core.getInput("LANG") || "pt";
 const filepath = (core.getInput("FILEPATH") || join(mainDir, README));
 console.log(`FILEPATH: ${filepath}`);
-let newFilepath = join(dirname(filepath), `${basename(filepath)}.${lang}.md`);
+let newFilepath = join(dirname(filepath), `${fileparse(filepath).name}.${lang}.md`);
 console.log(`NEW FILE PATH: ${newFilepath}`);
 const readme = readFileSync(filepath, { encoding: "utf8" });
 const readmeAST = toAst(readme);
@@ -62,7 +62,7 @@ async function commitChanges(lang) {
     "41898282+github-actions[bot]@users.noreply.github.com"
   );
   await git.commit(
-    `docs: Added ${basename(filepath)}.${lang}.md translation via https://github.com/camposdelima/translate-markdown`
+    `docs: Added ${fileparse(filepath).name}.${lang}.md translation via https://github.com/camposdelima/translate-markdown`
   );
   console.log("finished commit");
   await git.push();
