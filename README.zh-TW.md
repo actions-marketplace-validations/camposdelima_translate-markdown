@@ -13,7 +13,7 @@
 
 這是一個 GitHub 操作，可自動將您的存儲庫中的自述文件翻譯成指定的語言。
 
-_A submission for the [DEV：開源的 GitHub Actions！](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)黑客馬拉松_
+_提交給[DEV：開源的 GitHub Actions！](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)黑客馬拉松_
 
 ## 設置
 
@@ -73,7 +73,7 @@ _A submission for the [DEV：開源的 GitHub Actions！](https://dev.to/devteam
 
 ### 問題
 
-Check [這裡](https://github.com/dephraiim/translate-readme/issues/1)對於與此操作相關的問題。
+查看[這裡](https://github.com/dephraiim/translate-readme/issues/1)對於與此操作相關的問題。
 
 ### 發展
 
