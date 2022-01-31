@@ -9,11 +9,11 @@
 -   [فرنسي](README.fr.md)
 -   [عربى](README.ar.md)
 
-**GitHub Action لترجمة الملف التمهيدي إلى أي لغة**
+**GitHub Action to translate Readme to any language**
 
-This is a GitHub Action that automatically translate the readme in your repo to a specified language.
+هذا إجراء GitHub يقوم تلقائيًا بترجمة الملف التمهيدي في الريبو الخاص بك إلى لغة محددة.
 
-_تقديم ل[DEV: إجراءات جيثب للمصدر المفتوح!](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)هاكاثون_
+_تقديم ل[DEV: GitHub Actions For Open Source!](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn) hackathon_
 
 ## يثبت
 
